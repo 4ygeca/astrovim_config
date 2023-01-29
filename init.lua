@@ -47,6 +47,13 @@ local config = {
                         spell = false, -- sets vim.opt.spell
                         signcolumn = "auto", -- sets vim.opt.signcolumn to auto
                         wrap = false, -- sets vim.opt.wrap
+                        -- Настройка табуляции и отсутпов
+                        shiftwidth = 4, -- Number of space inserted for indentation
+                        showtabline = 4, -- always display tabline
+                        tabstop = 4, -- Number of space in a tab
+                        smarttab = true, -- Первый таб вначале строки всегда =shiftwidth
+                        expandtab = true, -- Табы заменены пробелами
+                        smartindent = true, -- подробнее help smartindent
                 },
                 g = {
                         mapleader = " ", -- sets vim.g.mapleader
@@ -89,8 +96,8 @@ local config = {
         default_theme = {
                 -- Modify the color palette for the default theme
                 colors = {
-                        fg = "#abb2bf",
-                        bg = "#1e222a",
+                        fg = "#abb2bf", --#abb2bf
+                        bg = "#1e222a", --#1e222a
                 },
                 highlights = function(hl) -- or a function that returns a new table of colors to set
                         local C = require "default_theme.colors"
